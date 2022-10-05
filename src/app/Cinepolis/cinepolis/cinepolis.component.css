@@ -1,0 +1,83 @@
+
+#entradas{
+    border:2px solid blue;
+    width: 49%;
+    float: left;
+}
+#total{
+    border:2px solid blue;
+    width: 40%;
+    margin-left: 55%;
+    height: 80px;
+    margin-top: -100px;
+}
+#botones{
+    border:2px solid blue;
+    width: 50%;
+    margin-left: 10px;
+    height: 200px;
+}
+#impresion{
+    border:2px solid white;
+    margin-top: -20px;
+    margin-bottom: 10px;
+    background-color: blue;
+    color:white;
+    width:70%;
+    margin-left: 10%;
+    
+}
+#imprIn{
+    width:50%;
+    background-color: lightblue;
+    
+}
+input{
+    margin-left: 60px;
+    border-color: blue;
+}
+.button1{
+    background-color: rgb(97, 162, 0);
+    color: white;
+    width:100px;
+    height:50px;
+    border-radius: 8px;
+    border-color: white;
+    margin-left: 40%;
+}
+.button2{
+    background-color: red;
+    color: white;
+    width:100px;
+    height:50px;
+    border-radius: 8px;
+    border-color: white;
+    margin-left: 40%;
+}
+h1{
+    background-color: blue;
+    width: 150px;
+    border: 3px solid white;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: -20px;
+    color: white;
+    
+}
+#cinepolis{
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+#cine{
+    float: right;
+    width: 310px;
+    height: 124px;
+    margin-top: 50px;
+}
+#mensaje{
+    color: red;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 400px;
+}

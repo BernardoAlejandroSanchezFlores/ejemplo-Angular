@@ -1,0 +1,24 @@
+<h1>Tablas de multiplicar</h1>
+<div class="row">
+    <div class="col-6">
+        <div class="mb-3 row">
+            <label for="num" class="col-sm-2 col-form-label">Numero</label>
+            <div class="col-sm-10">
+              <input type="text" [(ngModel)]="num" name="num" class="form-control" id="num">
+            </div>
+          </div>
+          
+
+          <div class="mb-3 row">
+           <button (click)="tabla()" class="btn btn-primary"> Calcular</button>
+          </div>
+    </div>
+    <div class="col-6" >
+        <div>Resultado: 
+            <div *ngFor="let total of total" class="tabla">
+                {{total}}
+            </div>
+        </div>
+        
+    </div>
+</div>

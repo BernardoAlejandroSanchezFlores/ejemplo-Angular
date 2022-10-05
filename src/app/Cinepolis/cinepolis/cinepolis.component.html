@@ -1,0 +1,101 @@
+
+<div  class="container-fluid con-1" id="body">
+  
+  <div id="cinepolis">
+    <img src="https://speed-service.com.mx/wp-content/uploads/2021/04/Cinepolis-Facturacion-Logo.png">
+  </div>
+  <br><br>
+  
+    <div class="row" >
+      <div id="entradas">
+        <h1>Entradas</h1> 
+        <div class="col-6">
+            <div class="mb-3 row">
+                <label for="nom" class="col-sm-2 col-form-label">Nombre</label>
+                <div class="col-sm-10">
+                  <input type="text" [(ngModel)]="nom" name="nom" class="form-control" id="nom" required>
+                </div>
+              </div>
+              <div class="mb-3 row">
+                <label for="cant" class="col-sm-2 col-form-label">Cantidad Compradores</label>
+                <div class="col-sm-10">
+                  <input type="text" [(ngModel)]="cant" name="cant" class="form-control" id="cant" required>
+                </div>
+              </div>
+
+              
+    
+              <div class="mb-3 row">
+                <label for="bol" class="col-sm-2 col-form-label">Cantidad de boletos</label>
+                <div class="col-sm-10">
+                  <input type="text" [(ngModel)]="bol " name="bol" class="form-control" id="bol" required>
+                </div>
+              </div>
+              <div id="mensaje">
+                
+                {{mensaje}}
+                
+              </div>
+
+              <div class="mb-3 row">
+                <label for="tarjeta" class="col-sm-2 col-form-label">Tarjeta Cineco</label>
+                <div class="col-sm-10">
+                  <input type="radio"  name="tarjeta" class="form-check-input" id="Si" value="Si"  [(ngModel)]="tarj " required>
+                  <label id="opciones" for="si">Sí </label>
+                  <br>
+                  <input type="radio"  name="tarjeta" class="form-check-input" id="No" value="No"  [(ngModel)]="tarj " required>
+                  <label id="opciones" for="no">No</label>
+                </div>
+              </div>
+              </div>
+            </div>
+
+              <br><br><br><br><br>
+            <div id="botones">
+              <h1>Acciones</h1>
+              <div class="mb-3 row">
+               <button (click)="Procesar()" class="button1"> Procesar</button>
+              </div>
+              <div class="mb-3 row">
+                <button (click)="cancelar()" class="button2"> Cancelar</button>
+               </div>
+              </div>
+       
+        <div id="total">
+          <h1>Salidas</h1>
+          <div class="col-6">
+              <div>Total a pagar: 
+                <input type="text"   class="form-control" value="$ {{total}}" readonly>
+              </div>
+          </div>
+        </div>
+              <br><br>
+
+              <div id="impresion" *ngIf="imp">
+                <img src="https://speed-service.com.mx/wp-content/uploads/2021/04/Cinepolis-Facturacion-Logo.png" id="cine">
+                <br>
+                <div>Nombre: 
+                  <input type="text"   class="form-control" value="{{nom}}" readonly id="imprIn">
+                </div><br>
+                <div>Cantidad de compradores: 
+                  <input type="text"   class="form-control" value="{{cant}}" readonly id="imprIn">
+                </div><br>
+                <div>Cantidad de boletas: 
+                  <input type="text"   class="form-control" value="{{bol}}" readonly id="imprIn">
+                </div><br>
+                <div>¿Cuenta con tarjeta Cineco?: 
+                  <input type="text"   class="form-control" value="{{tarj}}" readonly id="imprIn">
+                </div>
+                <br>
+                
+              </div>
+              
+              
+            
+
+          
+        
+    </div>
+    
+  
+</div>
