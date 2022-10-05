@@ -10,12 +10,13 @@ export class CinepolisComponent implements OnInit {
   nom:string="";
   cant:number;
   bol:number;
-  total:number;
+  total:any;
   tarj:string="";
-  costo:number=12000.00;
+  costo:number=12.00;
   imp;
   mensaje:string="";
   check:number;
+  res:number=0.0;
   
 
   constructor() { }
@@ -27,9 +28,10 @@ export class CinepolisComponent implements OnInit {
       this.mensaje="Ingrese datos faltantes para continuar";
 
     }
-    else if(this.check>=8){
+    else if(this.check>=7.1){
       this.imp=false;
       this.mensaje="Solo se pueden adquirir 7 boletas por comprador";
+      this.total=null;
 
       
     }
@@ -41,36 +43,56 @@ export class CinepolisComponent implements OnInit {
     Proceso():void{
       if(this.bol>=6 && this.tarj=="Si"){
         this.mensaje="";
-        this.total=((this.bol*this.costo)*0.15)*0.10;
+        this.res=(this.bol*this.costo);
+        this.total=(this.res*0.15);
+        this.res=(this.res-this.total);
+        this.total=(this.res*0.10)
+        this.res=(this.res-this.total);
+        this.total=this.res.toFixed(2);
         this.imp = true;
       }
       else if (this.bol>=6 && this.tarj=="No"){
         this.mensaje="";
-        this.total=(this.bol*this.costo)*0.15;
+        this.res=(this.bol*this.costo);
+        this.total=(this.res*0.15);
+        this.res=(this.res-this.total);
+        this.total=this.res.toFixed(2);
         this.imp = true;
       }
   
        if((this.bol>=3 && this.bol<=5) && this.tarj=="Si"){
         this.mensaje="";
-        this.total=((this.bol*this.costo)*0.10)*0.10;
+        this.res=(this.bol*this.costo);
+        this.total=(this.res*0.10);
+        this.res=(this.res-this.total);
+        this.total=(this.res*0.10)
+        this.res=(this.res-this.total);
+        this.total=this.res.toFixed(2);
         this.imp = true;
       }
       else if ((this.bol>=3 && this.bol<=5) && this.tarj=="No"){
         this.mensaje="";
-        this.total=(this.bol*this.costo)*0.10;
+        this.res=(this.bol*this.costo);
+        this.total=(this.res*0.10);
+        this.res=(this.res-this.total);
+        this.total=this.res.toFixed(2);
         this.imp = true;
       }
   
        if((this.bol>=1 && this.bol<=2) && this.tarj=="Si"){
         this.mensaje="";
-        this.total=(this.bol*this.costo)*0.10;
+        this.res=(this.bol*this.costo);
+        this.total=(this.res*0.10);
+        this.res=(this.res-this.total);
+        this.total=this.res.toFixed(2);
         this.imp = true;
       }
       else if ((this.bol>=1 && this.bol<=2) && this.tarj=="No"){
          this.mensaje="";
-        this.total=this.bol*this.costo;
+        this.total=(this.bol*this.costo).toFixed(2);
         this.imp = true;
       }
+      
     }
       
     
